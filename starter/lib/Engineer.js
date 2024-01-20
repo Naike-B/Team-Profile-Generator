@@ -1,4 +1,4 @@
-// importes the Employee class
+// imports the Employee class
 const Employee = require('./Employee');
 
 // defines the Engineer class that extends the Employee class
