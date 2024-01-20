@@ -9,9 +9,10 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
+const fsExtra = require('fs-extra');
 
-const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+const OUTPUT_DIR = path.resolve(__dirname, "output"); // directory
+const outputPath = path.join(OUTPUT_DIR, "team.html"); // HTML file
 
 const render = require("./src/page-template.js");
 
@@ -220,6 +221,21 @@ function application() {
             })
     };
 
+    async function buildTeam(){
+        // ensures that the directory for outputPath exists 
+        // if the directory doesn't exist it creates one
+        // uses the path module's dirname method to check what folder the file is and to determine the directory path from outputPath
+        await fsExtra.ensureDir(path.dirname(outputPath));
+        // fs.writeFile writes the data rendered from team in the team.html file 
+        // the outputPath variable passed in as an argument specifies the location where the file will be written
+        fs.writeFile(outputPath, render(team), (err) =>
+        // if an error occurs, it is logged to the console
+        // if the file is written successfully a message to confirm this is logged to the console
+        err ? console.error(err) : console.log('File created successfully!'))
+    }
+
     createManager();
-}
+};
 application();
+
+    

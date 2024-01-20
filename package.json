@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Naike-B/Team-Profile-Generator#readme",
   "dependencies": {
+    "fs-extra": "^11.2.0",
     "inquirer": "^8.0.0",
     "jest": "^29.7.0"
   }

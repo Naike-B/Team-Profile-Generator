@@ -15,7 +15,7 @@ class Intern extends Employee {
         return 'Intern';
     }
     // method to get the school of the intern
-    getGithub() {
+    getSchool() {
         return this.school;
     }
 }
