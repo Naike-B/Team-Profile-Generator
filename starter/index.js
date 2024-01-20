@@ -12,9 +12,9 @@ const fs = require("fs");
 // fs-extra module to use the ensureDir() method
 const fsExtra = require('fs-extra');
 // defines the output directory
-const OUTPUT_DIR = path.resolve(__dirname, "output"); 
+const OUTPUT_DIR = path.resolve(__dirname, "output");
 // defines the output path where the HTML file is saved
-const outputPath = path.join(OUTPUT_DIR, "team.html"); 
+const outputPath = path.join(OUTPUT_DIR, "team.html");
 // imports the render module from ./src/page-template.js 
 const render = require("./src/page-template.js");
 
@@ -232,7 +232,7 @@ function application() {
         // the outputPath variable passed in as an argument specifies the location where the file will be written
         fs.writeFile(outputPath, render(team), (err) =>
             // if an error occurs, it is logged to the console
-            // if the file is written successfully a message to confirm this is logged to the console
+            // if the file is written successfully, a message to confirm this is logged to the console
             err ? console.error(err) : console.log('File created successfully!'))
     };
 
