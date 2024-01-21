@@ -3,7 +3,7 @@ const Employee = require('./Employee');
 
 // defines the Intern class that extends the Employee class
 // the constructor method initialises an object of the class
-// calls the constructor of the parent class Employee with the name, id, and email parameters
+// super calls the constructor of the parent class Employee with the name, id, and email parameters
 // sets the school property of the Intern object
 class Intern extends Employee {
     constructor(name, id, email, school) {

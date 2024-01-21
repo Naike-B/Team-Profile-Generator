@@ -1,6 +1,6 @@
 // defines the Employee class 
 // the constructor method initialises an object of the class
-// assign the parameters passed to the contructor to the object properties
+// assigns the parameters passed to the constructor to the object properties
 class Employee {
     constructor(name, id, email) {
         this.name = name;
@@ -19,7 +19,7 @@ class Employee {
     getEmail() {
         return this.email;
     }
-    // method to get the role of the employee which is the name of the constructor
+    // method to get the role of the employee 
     getRole() {
         return 'Employee';
     }

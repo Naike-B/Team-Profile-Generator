@@ -208,7 +208,7 @@ function application() {
             },
             {
                 type: 'input',
-                message: "What school did the intern go to?",
+                message: "What school did the Intern go to?",
                 name: 'school',
                 validate: (value) => {
                     if (value !== '') {
@@ -226,7 +226,7 @@ function application() {
     async function buildTeam() {
         // ensures that the directory for outputPath exists 
         // if the directory doesn't exist it creates one
-        // uses the path module's dirname method to check what folder the file is and to determine the directory path from outputPath
+        // uses the path module's dirname method to check what folder the file is in and to determine the directory path from outputPath
         await fsExtra.ensureDir(path.dirname(outputPath));
         // fs.writeFile writes the data rendered from team in the team.html file 
         // the outputPath variable passed in as an argument specifies the location where the file will be written
